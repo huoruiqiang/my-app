@@ -31,11 +31,15 @@ class Greeting extends React.Component{
 
     render() {
         const isLoginIn = this.state.isLoginIn;
-        if (isLoginIn) {
-            return (<div><LogoutButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
-        } else {
-            return (<div><LoginButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
-        }
+        //改写为三目运算符
+        return isLoginIn
+            ? (<div><LogoutButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>)
+            : (<div><LoginButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
+        // if (isLoginIn) {
+        //     return (<div><LogoutButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
+        // } else {
+        //     return (<div><LoginButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
+        // }
     }
 }
 export default Greeting;
