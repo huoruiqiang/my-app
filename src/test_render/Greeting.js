@@ -27,7 +27,6 @@ class Greeting extends React.Component{
             // eslint-disable-next-line no-unused-expressions
             isLoginIn : !preState.isLoginIn
         }));
-        console.log(this.state.isLoginIn);
     }
 
     render() {

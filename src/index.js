@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Router from './test_router/router/router';
+import MailBox from "./test_render/unReadMessages";
 
 //测试条件渲染引入
 import Greeting from "./test_render/Greeting";
@@ -171,7 +172,11 @@ import * as serviceWorker from './serviceWorker';
 
 
 //3.1 通过登录和退出功能 测试条件渲染
-ReactDOM.render(<Greeting />, document.getElementById('root'));
+// ReactDOM.render(<Greeting />, document.getElementById('root'));
+
+//3.2 &&运算符和表达式一起使用,条件渲染
+// const unReadMessages = ['a', 'b'];
+// ReactDOM.render(<MailBox unReadMessages={unReadMessages}/>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change

@@ -1,7 +1,7 @@
 import React from "react";
 
 function UserGreeting(props) {
-    console.log(props.isLoginIn);
+    console.log("当前状态:" + props.isLoginIn);
     return <h1>welcome back! </h1>;
 }
 
@@ -11,4 +11,4 @@ function LogoutButton(props) {
         <button onClick={props.onClick}>Sign out</button>
     </div>);
 }
-export default LogoutButton;
+export default LogoutButton;    
