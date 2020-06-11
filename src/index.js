@@ -9,6 +9,7 @@ import MailBox from "./test_render/unReadMessages";
 import Greeting from "./test_render/Greeting";
 
 import * as serviceWorker from './serviceWorker';
+import Page from "./test_render/NotRender";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -172,13 +173,14 @@ import * as serviceWorker from './serviceWorker';
 
 
 //3.1 通过登录和退出功能 测试条件渲染，三目运算符
-ReactDOM.render(<Greeting />, document.getElementById('root'));
+// ReactDOM.render(<Greeting />, document.getElementById('root'));
 
 //3.2 &&运算符和表达式一起使用,条件渲染
 // const unReadMessages = ['a', 'b'];
 // ReactDOM.render(<MailBox unReadMessages={unReadMessages}/>, document.getElementById('root'));
 
-
+//3.3 通过return null；阻止组件的渲染或者隐藏已经渲染的组件
+ReactDOM.render(<Page />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
