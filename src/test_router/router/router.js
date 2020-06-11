@@ -9,7 +9,7 @@ const BasicRoute = () => (
     <HashRouter history={hashHistory}>
         <Switch>
             <Route exact path="/" component={Home}/>
-            <Route exact path="/detail" component={Detail}/>
+            <Route exact path="/detail/:id" component={Detail}/>
         </Switch>
     </HashRouter>
 );

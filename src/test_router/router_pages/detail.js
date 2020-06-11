@@ -12,8 +12,15 @@ export default class Home extends React.Component {
         return (
             <div>
                 <a href={forward}>回到home</a>
-                <button onClick={() => {this.props.history.push('/')}}>通过函数跳转回home</button>
+                {/*<button onClick={() => {this.props.history.push('/')}}>通过函数跳转回home</button>*/}
             </div>
         )
+    }
+
+    //渲染后执行的操作
+    componentDidMount() {
+        console.log("000000000000");
+        console.log(this.props.match.params);
+        // console.log(this.props.history.location.state);
     }
 }
