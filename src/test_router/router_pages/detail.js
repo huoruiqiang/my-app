@@ -5,10 +5,14 @@ import React from 'react';
 let forward = '#/'
 
 export default class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>
                 <a href={forward}>回到home</a>
+                <button onClick={() => {this.props.history.push('/')}}>通过函数跳转回home</button>
             </div>
         )
     }
