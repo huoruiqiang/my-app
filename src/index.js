@@ -171,8 +171,8 @@ import * as serviceWorker from './serviceWorker';
 // <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 
 
-//3.1 通过登录和退出功能 测试条件渲染
-// ReactDOM.render(<Greeting />, document.getElementById('root'));
+//3.1 通过登录和退出功能 测试条件渲染，三目运算符
+ReactDOM.render(<Greeting />, document.getElementById('root'));
 
 //3.2 &&运算符和表达式一起使用,条件渲染
 // const unReadMessages = ['a', 'b'];

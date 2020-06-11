@@ -2,7 +2,12 @@ import React from "react";
 
 function UserGreeting(props) {
     console.log("当前状态:" + props.isLoginIn);
-    return <h1>welcome back! </h1>;
+    return (
+        <h1>
+            welcome back!
+            The user is {props.isLoginIn ? 'currently' : 'not'} login!
+        </h1>)
+        ;
 }
 
 function LogoutButton(props) {

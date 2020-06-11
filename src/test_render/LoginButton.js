@@ -1,7 +1,11 @@
 import React  from "react";
 function GuestGreeting(props) {
     console.log("当前状态:" + props.isLoginIn)
-    return <h1>Plese sign in</h1>;
+    return (
+        <h1>
+            Please sign in!
+            The user is {props.isLoginIn ? 'currently' : 'not'} login!
+        </h1>);
 }
 
 function LoginButton(props) {
