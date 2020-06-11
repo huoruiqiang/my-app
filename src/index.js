@@ -128,6 +128,27 @@ import * as serviceWorker from './serviceWorker';
 
 
 
+
+
+//二、React的事件处理
+
+//2.1阻止默认的行为
+// function ActionLink() {
+//     function handleLinkClick(e) {
+//         //阻止
+//         // e.preventDefault();
+//         console.log("9999")
+//     }
+//     return (<a href="https://www.baidu.com/" onClick={handleLinkClick}> click me</a>);
+// }
+//
+
+
+// ReactDOM.render(<ActionLink />, document.getElementById('root'));
+
+
+
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
