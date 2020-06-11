@@ -1,14 +1,6 @@
 import React  from "react";
-function UserGreeting(props) {
-    console.log(props.isLoginIn);
-    return <h1>welcome back! </h1>;
-}
-
-function GuestGreeting(props) {
-    console.log(props.isLoginIn)
-    return <h1>Plese sign in</h1>;
-}
-
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 // function Greeting(props) {
 //
 //     const isLoginIn = props.isLoginIn;
@@ -18,6 +10,8 @@ function GuestGreeting(props) {
 //         return <GuestGreeting isLoginIn = {isLoginIn}/>;
 //     }
 // }
+
+
 
 class Greeting extends React.Component{
     constructor(props) {
@@ -32,22 +26,16 @@ class Greeting extends React.Component{
         this.setState((preState, nextProps) => ({
             // eslint-disable-next-line no-unused-expressions
             isLoginIn : !preState.isLoginIn
-        }))
+        }));
+        console.log(this.state.isLoginIn);
     }
 
     render() {
         const isLoginIn = this.state.isLoginIn;
-
         if (isLoginIn) {
-            return (<div>
-                <UserGreeting isLoginIn={isLoginIn}/>
-                <button onClick={this.handleClick}>Sign out</button>
-            </div>);
+            return (<div><LogoutButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
         } else {
-            return (<div>
-                <GuestGreeting isLoginIn={isLoginIn}/>
-                <button onClick={this.handleClick}>Sign in</button>
-            </div>);
+            return (<div><LoginButton onClick={this.handleClick} isLoginIn={isLoginIn} /></div>);
         }
     }
 }
