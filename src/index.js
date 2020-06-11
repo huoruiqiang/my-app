@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import Router from './test_router/router/router';
 
+//测试条件渲染引入
+import Greeting from "./test_render/Greeting";
+
 import * as serviceWorker from './serviceWorker';
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
@@ -144,7 +147,7 @@ import * as serviceWorker from './serviceWorker';
 //
 // ReactDOM.render(<ActionLink />, document.getElementById('root'));
 
-//2.1 自定义Toggle组件,Toggle组件会渲染一个让用户切换开关状态的按钮
+//2.2 自定义Toggle组件,Toggle组件会渲染一个让用户切换开关状态的按钮
 // class Toggle extends React.Component {
 //     constructor(props) {
 //         super(props);
@@ -163,7 +166,12 @@ import * as serviceWorker from './serviceWorker';
 // }
 // ReactDOM.render(<Toggle />, document.getElementById('root'));
 
+//2.3 事件处理程序来传递参数 todo
+// <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 
+
+//3.1 通过登录和退出功能 测试条件渲染
+ReactDOM.render(<Greeting />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
