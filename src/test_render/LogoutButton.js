@@ -8,7 +8,7 @@ function UserGreeting(props) {
 function LogoutButton(props) {
     return (<div>
         <UserGreeting isLoginIn={props.isLoginIn}/>
-        <button onClick={props.onclick}>Sign out</button>
+        <button onClick={props.onClick}>Sign out</button>
     </div>);
 }
 export default LogoutButton;
