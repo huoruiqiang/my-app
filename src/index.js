@@ -142,9 +142,26 @@ import * as serviceWorker from './serviceWorker';
 //     return (<a href="https://www.baidu.com/" onClick={handleLinkClick}> click me</a>);
 // }
 //
-
-
 // ReactDOM.render(<ActionLink />, document.getElementById('root'));
+
+//2.1 自定义Toggle组件,Toggle组件会渲染一个让用户切换开关状态的按钮
+// class Toggle extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {isToggleOn: true};
+//     }
+//
+//     handleClick() {
+//         this.setState(state => ({
+//             isToggleOn: !state.isToggleOn
+//         }))
+//     }
+//
+//     render() {
+//         return (<button onClick={() => this.handleClick()}>{this.state.isToggleOn ? "ON" : "false"}</button>);
+//     }
+// }
+// ReactDOM.render(<Toggle />, document.getElementById('root'));
 
 
 
