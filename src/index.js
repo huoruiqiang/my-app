@@ -17,6 +17,8 @@ import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
 import Blog from "./list/Blog";
 import EssayForm from "./form/EssayForm";
+import Reservation from "./form/Reservation";
+import Calculator from "./state_up/Calculator";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -205,8 +207,14 @@ import EssayForm from "./form/EssayForm";
 // ReactDOM.render(<FormSelect />, document.getElementById('root'));
 
 //5.3 form组件的使用 ----textarea
-ReactDOM.render(<EssayForm />, document.getElementById('root'));
+// ReactDOM.render(<EssayForm />, document.getElementById('root'));
 
+
+//5.4 处理多个输入
+// ReactDOM.render(<Reservation />, document.getElementById('root'));
+
+//6.1组件状态提升
+ReactDOM.render(<Calculator />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
