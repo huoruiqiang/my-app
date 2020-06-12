@@ -9,7 +9,7 @@ import MailBox from "./test_render/unReadMessages";
 import Greeting from "./test_render/Greeting";
 
 //列表 & key
-import Ul from "./list/ul";
+import NumberList from "./list/NumberList";
 
 import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
@@ -188,7 +188,7 @@ import Page from "./test_render/NotRender";
 
 //4.1 列表 & key===>接收一个输入参数的
 const numbers = [1, 2, 3, 3, 4, 5];
-ReactDOM.render(<Ul numbers={numbers}/>, document.getElementById('root'));
+ReactDOM.render(<NumberList numbers={numbers}/>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
