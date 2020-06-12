@@ -186,8 +186,9 @@ import Page from "./test_render/NotRender";
 // ReactDOM.render(<Page />, document.getElementById('root'));
 
 
-//4.1 列表 & key
-ReactDOM.render(<Ul />, document.getElementById('root'));
+//4.1 列表 & key===>接收一个输入参数的
+const numbers = [1, 2, 3, 3, 4, 5];
+ReactDOM.render(<Ul numbers={numbers}/>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
