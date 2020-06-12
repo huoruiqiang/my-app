@@ -1,18 +1,6 @@
 import React  from "react";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
-// function Greeting(props) {
-//
-//     const isLoginIn = props.isLoginIn;
-//     if (isLoginIn) {
-//         return <UserGreeting isLoginIn={isLoginIn} />;
-//     } else {
-//         return <GuestGreeting isLoginIn = {isLoginIn}/>;
-//     }
-// }
-
-
-
 class Greeting extends React.Component{
     constructor(props) {
         super(props);

@@ -8,6 +8,9 @@ import MailBox from "./test_render/unReadMessages";
 //测试条件渲染引入
 import Greeting from "./test_render/Greeting";
 
+//列表 & key
+import Ul from "./list/ul";
+
 import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
 //1、my-app入口
@@ -180,7 +183,13 @@ import Page from "./test_render/NotRender";
 // ReactDOM.render(<MailBox unReadMessages={unReadMessages}/>, document.getElementById('root'));
 
 //3.3 通过return null；阻止组件的渲染或者隐藏已经渲染的组件
-ReactDOM.render(<Page />, document.getElementById('root'));
+// ReactDOM.render(<Page />, document.getElementById('root'));
+
+
+//4.1 列表 & key
+ReactDOM.render(<Ul />, document.getElementById('root'));
+
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
