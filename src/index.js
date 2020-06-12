@@ -11,6 +11,8 @@ import Greeting from "./test_render/Greeting";
 //列表 & key
 import NumberList from "./list/NumberList";
 
+import FormSelect from "./form/FormSelect";
+
 import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
 import Blog from "./list/Blog";
@@ -192,12 +194,14 @@ import Blog from "./list/Blog";
 // ReactDOM.render(<NumberList numbers={numbers}/>, document.getElementById('root'));
 
 //4.2 数组元素中使用的 key 在其兄弟节点之间应该是独一无二的。然而，它们不需要是全局唯一
-const posts = [
-    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-];
-ReactDOM.render(<Blog posts={posts}/>, document.getElementById('root'));
+// const posts = [
+//     {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+//     {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+// ];
+// ReactDOM.render(<Blog posts={posts}/>, document.getElementById('root'));
 
+//5.1 form组件的使用---select  && class field方式传递 event参数及通过event.target.value获取值
+ReactDOM.render(<FormSelect />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
