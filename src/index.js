@@ -19,6 +19,7 @@ import Blog from "./list/Blog";
 import EssayForm from "./form/EssayForm";
 import Reservation from "./form/Reservation";
 import Calculator from "./state_up/Calculator";
+import HookExample from "./hook/HookExample";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -214,7 +215,11 @@ import Calculator from "./state_up/Calculator";
 // ReactDOM.render(<Reservation />, document.getElementById('root'));
 
 //6.1组件状态提升
-ReactDOM.render(<Calculator />, document.getElementById('root'));
+// ReactDOM.render(<Calculator />, document.getElementById('root'));
+
+//7.1 hook的demo
+ReactDOM.render(<HookExample />, document.getElementById('root'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
