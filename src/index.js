@@ -13,6 +13,7 @@ import NumberList from "./list/NumberList";
 
 import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
+import Blog from "./list/Blog";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -187,8 +188,15 @@ import Page from "./test_render/NotRender";
 
 
 //4.1 列表 & key===>接收一个输入参数的
-const numbers = [1, 2, 3, 3, 4, 5];
-ReactDOM.render(<NumberList numbers={numbers}/>, document.getElementById('root'));
+// const numbers = [1, 2, 3, 3, 4, 5];
+// ReactDOM.render(<NumberList numbers={numbers}/>, document.getElementById('root'));
+
+//4.2 数组元素中使用的 key 在其兄弟节点之间应该是独一无二的。然而，它们不需要是全局唯一
+const posts = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
+ReactDOM.render(<Blog posts={posts}/>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
