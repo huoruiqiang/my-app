@@ -16,6 +16,7 @@ import FormSelect from "./form/FormSelect";
 import * as serviceWorker from './serviceWorker';
 import Page from "./test_render/NotRender";
 import Blog from "./list/Blog";
+import EssayForm from "./form/EssayForm";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -201,7 +202,11 @@ import Blog from "./list/Blog";
 // ReactDOM.render(<Blog posts={posts}/>, document.getElementById('root'));
 
 //5.1 form组件的使用---select  && class field方式传递 event参数及通过event.target.value获取值
-ReactDOM.render(<FormSelect />, document.getElementById('root'));
+// ReactDOM.render(<FormSelect />, document.getElementById('root'));
+
+//5.3 form组件的使用 ----textarea
+ReactDOM.render(<EssayForm />, document.getElementById('root'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
