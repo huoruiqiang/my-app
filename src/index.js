@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import store from "./store";
+import store from "./easy-peasy/store/Store";
 // import App from './App';
 import App from "./easy-peasy/app/App";
 import Router from './test_router/router/router';
@@ -22,7 +24,7 @@ import Reservation from "./form/Reservation";
 import Calculator from "./state_up/Calculator";
 import HookExample from "./hook/HookExample";
 import {StoreProvider} from "easy-peasy";
-import store from "./easy-peasy/store/Store";
+import Counts from "./easy-peasy/action/Counts";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -226,12 +228,18 @@ import store from "./easy-peasy/store/Store";
 
 
 //8.1 easy-peasy
+// ReactDOM.render(
+//     <StoreProvider store={store}>
+//     <App></App>
+// </StoreProvider>,
+//     document.getElementById('root'));
+
+//8.2 useStoreActions 和useStoreState的使用,两个函数的mapFun的作用是在store找到指定的state和action
 ReactDOM.render(
     <StoreProvider store={store}>
-    <App></App>
-</StoreProvider>,
-    document.getElementById('root'));
-
+    <Counts/>
+    </StoreProvider>
+    , document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
