@@ -1,5 +1,5 @@
 import React from "react";
-import {action, createStore} from "easy-peasy";
+import {action,debug, createStore} from "easy-peasy";
 // import storeModel from "../model/StoreModel";
 import ProductModel from "../model/ProductsModel";
 import basketModel from "../model/BasketModel";
@@ -9,6 +9,8 @@ const storeModel = {
     basketModel,
     count : 5,
     addCounts: action((state, payload) => {
+        //使用debug来调试状态变更
+        console.log(debug(state));
         state.count+=payload;
     })
 };
