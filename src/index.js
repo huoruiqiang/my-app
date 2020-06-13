@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import App from "./easy-peasy/app/App";
 import Router from './test_router/router/router';
 import MailBox from "./test_render/unReadMessages";
 
@@ -20,6 +21,8 @@ import EssayForm from "./form/EssayForm";
 import Reservation from "./form/Reservation";
 import Calculator from "./state_up/Calculator";
 import HookExample from "./hook/HookExample";
+import {StoreProvider} from "easy-peasy";
+import store from "./easy-peasy/store/Store";
 //1、my-app入口
 // ReactDOM.render(<Router/>, document.getElementById('root'));
 
@@ -218,8 +221,16 @@ import HookExample from "./hook/HookExample";
 // ReactDOM.render(<Calculator />, document.getElementById('root'));
 
 //7.1 hook的demo
-ReactDOM.render(<HookExample />, document.getElementById('root'));
+// ReactDOM.render(<HookExample />, document.getElementById('root'));
 
+
+
+//8.1 easy-peasy
+ReactDOM.render(
+    <StoreProvider store={store}>
+    <App></App>
+</StoreProvider>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
